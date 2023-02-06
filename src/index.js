@@ -6,9 +6,11 @@ import ReactDOM from 'react-dom';
 
 const name = React.createElement('h1', null, 'Robert Berger');
 const subTitle = React.createElement('p', null, 'Aspiring Software Developer');
-const header = React.createElement('div', null, [name, subTitle]);
+const container1 = React.createElement('div',{id:'header'}, [name, subTitle]);
 
-const container = React.createElement('div', null, [header]);
+
+
+const container = React.createElement('div', null, [container1]);
 
 ReactDOM.render(
   container,
