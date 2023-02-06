@@ -8,6 +8,8 @@ const name = React.createElement('h1', null, 'Robert Berger');
 const subTitle = React.createElement('p', null, 'Aspiring Software Developer');
 const container1 = React.createElement('div',{id:'header'}, [name, subTitle]);
 
+const aboutMe = ['Focused', 'Avid-Reader', 'Pilot'];
+
 
 
 const container = React.createElement('div', null, [container1]);
