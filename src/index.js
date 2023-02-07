@@ -19,10 +19,11 @@ function listMaker() {
   );
 }
 
+const foot = React.createElement('a', {href: 'github.com/robberger'}, 'My Github Page');
+const container2 = React.createElement('div', {id: 'footer'}, [foot]);
 
 
-
-const container = React.createElement('div', null, [container1, listMaker()]);
+const container = React.createElement('div', null, [container1, listMaker(), container2]);
 
 ReactDOM.render(
   container,
