@@ -8,18 +8,21 @@ const name = React.createElement('h1', null, 'Robert Berger');
 const subTitle = React.createElement('p', null, 'Aspiring Software Developer');
 const container1 = React.createElement('div',{id:'header'}, [name, subTitle]);
 
-let aboutMe = ['Focused', 'Avid-Reader', 'Pilot'];
 
-// aboutMe.map((value) => React.createElement('li', null, {value}));
+function listMaker() {
+  const aboutMe = ['Focused', 'Avid-Reader', 'Pilot'];
+  const listMe = aboutMe.map((aboutList) =>
+    <li>{aboutList}</li>
+  );
+  return (
+    <ul>{listMe}</ul>
+  );
+}
 
-aboutMe.map(function (value) {
-  return React.createElement('li', null, `${value}`);
-});
-
-const container2 = React.createElement('ul', null, [aboutMe]);
 
 
-const container = React.createElement('div', null, [container1, container2]);
+
+const container = React.createElement('div', null, [container1, listMaker()]);
 
 ReactDOM.render(
   container,
